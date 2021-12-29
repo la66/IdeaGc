@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+  	<servlet-mapping>
+          <servlet-name>default</servlet-name>
+          <url-pattern>*.css</url-pattern>
+      </servlet-mapping>
+      <servlet-mapping>
+          <servlet-name>default</servlet-name>
+          <url-pattern>*.js</url-pattern>
+      </servlet-mapping>
+      <servlet-mapping>
+          <servlet-name>default</servlet-name>
+          <url-pattern>*.ico</url-pattern>
+      </servlet-mapping>
+      <servlet-mapping>
+          <servlet-name>default</servlet-name>
+          <url-pattern>*.jpg</url-pattern>
+      </servlet-mapping>
+      <servlet-mapping>
+          <servlet-name>default</servlet-name>
+          <url-pattern>*.png</url-pattern>
+      </servlet-mapping>
+      <servlet-mapping>
+          <servlet-name>default</servlet-name>
+          <url-pattern>*.gif</url-pattern>
+      </servlet-mapping>
+
+</module>

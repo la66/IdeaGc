@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0 auto;
+            padding: 0;
+        }
+        .tab_list{
+            margin: auto;
+            width: 60%;
+            height: 100px;
+            border: 2px solid #D3D3D3;
+            border-radius: 5px;
+            background-color: 	#ADD8E6;
+        }
+        .tab_con{
+            /*border: 1px solid red;*/
+            width: 60%;
+            margin: auto;
+        }
+        ul{
+            margin-top: 30px;
+            margin-left: 10px;
+        }
+        .tab_list li{
+            float: left;
+            height: 39px;
+            line-height: 39px;
+            padding: 0 20px;
+            text-align: center;
+            /*cursor: pointer;*/
+            list-style-type:none;
+            list-style-position: inside;
+        }
+        .tab_list .current{
+            background-color: red;
+            color: white;
+        }
+        .item_info{
+            padding: 20px 0 0 20px;
+        }
+        .item{
+            display: none;/*隐藏*/
+        }
+    </style>
+</head>
+<body>
+    <div class="tab">
+        <div class="tab_list">
+            <ul>
+                <li class="current">商品介绍</li>
+                <li>规格与包装</li>
+                <li>售后保障</li>
+                <li>商品评价（5000)</li>
+                <li>手机社区</li>
+            </ul>
+        </div>
+        <div class="tab_con">
+            <div class="item" style="display: block;">
+                商品介绍模块内容
+            </div>
+            <div class="item">
+                规格与包装模块内容
+            </div>
+            <div class="item">
+                后勤保障模块内容
+            </div>
+            <div class="item">
+                商品评价模块内容
+            </div>
+            <div class="item">
+                商品手机模块内容
+            </div>
+        </div>
+    </div>
+    <script>
+        //1．上的模块选项卡，点士某―个，当前这―个底色会是红色，其余不变〈扑他忠想)修改类名的方式
+        var tab_list=document.querySelector('.tab_list');
+        var lis=document.querySelectorAll('li');
+        var items=document.querySelectorAll('.item');
+        //2.注册事件
+        for (var i=0;i<lis.length;i++){
+            lis[i].setAttribute('index',i);
+            lis[i].onclick=function (){
+                for (var i=0;i<lis.length;i++){
+                    lis[i].className='';
+                }
+                //留下我自己
+                this.className='current';
+                //2.下面的内容显示模块
+                var index=this.getAttribute('index');
+                for (var i=0;i< items.length;i++){
+                    items[i].style.display='none';
+                }
+                items[index].style.display='block';
+            }
+        }
+
+    </script>
+</body>
+</html>

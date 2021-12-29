@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>栅格系统</title>
+    <!--layui的核心css文件-->
+    <link href="../layui-v2.6.8/layui/css/layui.css" rel="stylesheet" type="text/css">
+    <!--layui的核心js文件采用模块化引入-->
+    <script src="../layui-v2.6.8/layui/layui.js"></script>
+</head>
+<body>
+<!-- 你的 HTML 代码 -->
+<!--
+    栅格系统
+        1.定义行 layui-row
+        1.定义列 layui-col-md*
+        3．每一行被均分为12列，列的总数不能超过12，否则会自动换行
+        4．响应式规则
+            栅格会自动根据屏幕的分辨率选择对应的样式效果。
+        列偏移
+            将列向右移动指定列数.*layui-col-md-offset*
+                *代表的是列数
+-->
+<!--布局容器-->
+<div class="layui-container">
+    <!--定义行-->
+    <div class="layui-row">
+        <!--定义列-->
+        <div class="layui-col-md5" style="background-color: #00F7DE">
+            <!---->
+            内容的12/5
+        </div>
+        <div class="layui-col-md7" style="background-color: #00FF00">
+            <!---->
+            内容的12/7
+        </div>
+    </div>
+    <div class="layui-row">
+        <!--定义列-->
+        <div class="layui-col-md4" style="background-color: #0000FF">
+            <!---->
+            内容的12/4
+        </div>
+        <div class="layui-col-md4" style="background-color: #01AAED">
+            <!---->
+            内容的12/4
+        </div>
+    </div>
+    <hr>
+    <h1>列边距</h1>
+    <div class="layui-row layui-col-space20">
+        <div class="layui-col-md4" >
+            <div style="background-color: #01AAED">4</div>
+        </div>
+        <div class="layui-col-md4" >
+            <div style="background-color: red">4</div>
+        </div>
+        <div class="layui-col-md4" >
+            <div style="background-color: blueviolet">4</div>
+        </div>
+    </div>
+    <hr>
+    <h1>列偏移</h1>
+    <div class="layui-row ">
+        <div class="layui-col-md4" >
+            <div style="background-color: #01AAED">4</div>
+        </div>
+        <div class="layui-col-md4 layui-col-md-offset1" >
+            <div style="background-color: red">向右移动4</div>
+        </div>
+
+    </div>
+</div>
+<script>
+    /*layui.use(['layer', 'form'], function(){
+        var layer = layui.layer
+            ,form = layui.form;
+        layer.msg('Hello World');
+    });*/
+</script>
+</body>
+</html>

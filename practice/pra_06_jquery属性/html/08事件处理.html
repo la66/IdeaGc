@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+        .cuurent{
+            background-color: purple;
+        }
+    </style>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<div></div>
+<script>
+    $(function(){
+        //1.单个事件处理
+      /*  $("div").click(function(){
+            $(this).css("background","purple");
+        });
+        $("div").mouseenter(function(){
+            $(this).css("background","skyblue");
+        })*/
+        //2.事件处理on
+        /*$("div").on({mouseenter: function(){
+                $(this).css("background","skyblue");
+            },
+            click:function(){
+                $(this).css("background","purple");
+            },
+            mouseleave: function(){
+                $(this).css("background","blue");
+            }
+        });*/
+        $("div").on("mouseenter mouseleave",function(){
+            // alert(11);
+            $(this).toggleClass("current");
+        });
+
+    })
+</script>
+</body>
+</html>

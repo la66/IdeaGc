@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        .container{
+            width: 900px;
+            height: 500px;
+            background-color: pink;
+            margin:400px auto;
+        }
+        .back{
+            width: 50px;
+            line-height: 50px;
+            background-color: purple;
+            text-align: center;
+            position: fixed;
+            right: 30px;
+            bottom: 100px;
+            display: none;
+        }
+    </style>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<div class="back">返回头部</div>
+<div class="container"></div>
+<script>
+    $(function(){
+        $(document).scrollTop(20);
+        //被卷去的头部 scrollTop()  被卷去的左侧 scrollLeft()
+        //页面滚动事件
+        var boxTop=$(".container").offset().top;
+        $(window).scroll(function(){
+            // console.log(11);
+            $(document).scrollTop();
+            if ($(document).scrollTop()>=boxTop){
+                // $(".back").show();
+                $(".back").fadeIn();
+            }else{
+                $(".back").fadeOut();
+            }
+        });
+        //返回顶部
+        $(".back").click(function(){
+            // $(document).scrollTop(0);
+            $("body,html").stop().animate({
+                scrollTop:0
+            })
+        })
+
+    })
+</script>
+</body>
+</html>

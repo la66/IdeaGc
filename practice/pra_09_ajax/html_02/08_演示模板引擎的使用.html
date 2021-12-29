@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--1.导入模板引擎-->
+    <!--在window 全局就会多一个函数,叫做template('模板的id',需要渲染的数据)-->
+    <script src="../template-web.js"></script>
+    <script src="../jquery-3.3.1/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<div id="container"></div>
+
+<!--3定义模板-->
+<!--3.1必须定义到script中-->
+<script type="text/html" id="tp1-user">
+    <h1>{{name}}----------{{age}}</h1>
+    {{@test}}
+    <div>
+        {{if flag===0}}
+        flag的值是0
+        {{else if flag===1}}
+        flag的值是1
+        {{/if}}
+    </div>
+    <ul>
+        {{each hobby}}
+        <li>索引是:{{$index}},循环是:{{$value}}</li>
+        {{/each}}
+    </ul>
+    <h3>{{regTime | dateFormat}}</h3><!--过滤器处理函数-->
+</script>
+
+
+<script>
+    //定义处理时间的过滤器
+    template.defaults.imports.dateFormat=function(date){
+        var y=date.getFullYear();//定义年
+        var m=date.getMonth()+1;//定义月
+        var d=date.getDate();//定义日
+
+        return y+'-'+m+'-'+d  //一定要返回值
+
+    }
+
+
+    //2.定义需要渲染的数据
+    var data ={
+        name:'zs',
+        age:20,
+        test:'<h3>测试原文输出</h3>',
+        flag:0,
+        hobby:['吃饭','睡觉','梦想'],
+        regTime:new Date()
+
+    }
+
+    //4.调用template()函数
+     var htmlStr= template('tp1-user',data)
+
+    //5.渲染html结构
+    $('#container').html(htmlStr);
+</script>
+</body>
+</html>

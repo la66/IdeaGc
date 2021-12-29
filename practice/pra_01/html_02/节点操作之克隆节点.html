@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <script>
+        //1.获取元素
+        var ul=document.querySelector('ul');
+        //2.克隆node.cloneNode();括号里面为空或者里面是false 浅拷贝 只复制标签 不复制类容
+        //node.cloneNode(true);括号里面为trur 深拷贝 复制标签 复制类容
+        var lili=ul.children[0].cloneNode(true);
+        //3.添加到某一位置
+        ul.appendChild(lili);
+    </script>
+</body>
+</html>

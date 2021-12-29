@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son">儿子</div>
+    </div>
+    <div class="nav">
+        <p>你是去</p>
+        <div>
+            <p>我是p</p>
+        </div>
+    </div>
+<script>
+    //1.获取元素 方法带() 返回的是最近一级的父级元素 亲爸爸
+    $(function(){
+        //1.夫 parent()
+        $(".son").parent();
+        console.log($(".son").parent())
+        //(1)亲儿子 children()
+        // $(".nav").children('p').css("color",'red');
+        console.log($(".nav").children('p'));
+        //(2）可以选里面所有的孩子包括儿子和孙子find() 类似后代选择器
+        $('.nav').find('p').css("color",'red');
+        //3.兄
+    })
+
+    //2.给
+    //371
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--layui的核心css文件-->
+    <link href="../layui-v2.6.8/layui/css/layui.css" rel="stylesheet" type="text/css">
+    <!--layui的核心js文件采用模块化引入-->
+    <script src="../layui-v2.6.8/layui/layui.js"></script>
+</head>
+<body>
+<!-- 你的HTML代码-->
+<!--方法渲染-->
+<table id="demo"></table>
+    <hr>
+<!---->
+    <table id="demo1"></table>
+<!--//加载table模块-->
+<script>
+    layui.use("table", function(){
+        var table = layui.table;
+        //加载table实例 执行渲染
+        //table.render()方法返回一个对象
+        table.render({
+            elem: "#demo",//elem属性用来绑定容器的id属性值
+            url: "../js/user.json",//数据接口
+            cols: [[//设置表头
+                {field: 'id', title: '用户编号', sort: true, width: 120},
+                {field: 'username', title:'用户姓名', width: 100},
+                {field: 'sex', title: '性别', width: 100, sort:true},
+                {field: 'city', title: '城市', width: 100},
+                {field: 'sign', title: '签名'}
+            ]],
+        });
+    });
+</script>
+</body>
+</html>

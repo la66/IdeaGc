@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<button>点击停止定时器</button>
+<script>
+    var btn=document.querySelector('button');
+    var timer=setTimeout(function(){
+        console.log('包扎');
+    },5000);
+    btn.addEventListener('click',function(){
+        clearTimeout(timer);//关闭定时器
+    })
+</script>
+</body>
+</html>

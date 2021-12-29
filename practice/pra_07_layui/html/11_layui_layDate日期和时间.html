@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>日期和时间</title>
+    <!--layui的核心css文件-->
+    <link href="../layui-v2.6.8/layui/css/layui.css" rel="stylesheet" type="text/css">
+    <!--layui的核心js文件采用模块化引入-->
+    <script src="../layui-v2.6.8/layui/layui.js"></script>
+</head>
+<body>
+<!-- 你的 HTML 代码 -->
+<div class="layui-inline">
+    <input type="text" class="layui-input" id="date1" />
+</div>
+<hr>
+<div class="layui-inline">
+    <input type="text" class="layui-input" id="date2" />
+</div>
+<hr>
+<div class="layui-inline">
+    <input type="text" class="layui-input" id="date3" />
+</div>
+<hr>
+<div class="layui-inline">
+    <input type="text" class="layui-input" id="date4" />
+</div>
+<hr>
+<div class="layui-inline">
+    <input type="text" class="layui-input" id="date5" />
+</div>
+<hr>
+<div class="layui-inline">
+    <input type="text" class="layui-input" id="date6" />
+</div>
+<hr>
+<div class="layui-inline">
+    <input type="text" class="layui-input" id="date7" />
+</div>
+<hr>
+<div class="layui-inline">
+    <input type="text" class="layui-input" id="date8" />
+</div>
+<hr>
+
+<script>
+   //加载laydate模块
+   layui.use('laydate',function(){
+    var laydate=layui.laydate;
+    //加载laydate示例
+       laydate.render({
+          elem:"#date1",//绑定id为date的元素
+       });
+       laydate.render({
+          elem:"#date2",//绑定id为date的元素
+           type:"year"//年选择器
+       });
+       laydate.render({
+          elem:"#date3",//绑定id为date的元素
+           type:"month"//年月选择器
+       });
+       laydate.render({
+          elem:"#date4",//绑定id为date的元素
+           type:"date"//年月日选择器
+       });
+       laydate.render({
+          elem:"#date5",//绑定id为date的元素
+           type:"time"//时间(时分秒)选择器
+       });
+       laydate.render({
+          elem:"#date6",//绑定id为date的元素
+           type:"datetime"//年月日(时分秒)选择器
+       });
+       //自定义日期格式
+       laydate.render({
+           elem: '#date6',
+           // format: 'yyyy年MM月dd日'//任意组合
+           format: 'yyyy/MM/dd/'//任意组合
+       });
+       //传入符合format格式的字符给初始值
+       laydate.render({elem:'date8',
+           value:'2018-08-18'//必须遵循format参数设定的格式
+        });
+   });
+
+</script>
+</body>
+</html>

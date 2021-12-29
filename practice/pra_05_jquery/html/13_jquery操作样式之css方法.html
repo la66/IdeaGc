@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" src="https://code.jquery.com/jquery-3.6.0.slim.min.js">
+    </script>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+<script>
+    //操作样式之css样式
+    $(function(){
+        $("div").css("width");
+        console.log(   $("div").css("width"));
+       /* $("div").css("width","150px");
+        $("div").css( "width", 300);*/
+        //$( "div").css(height,"300px");属性名一定要加引号
+        $("div").css({
+            width: 400,
+            height: 400,
+            background:'red'
+            //1/如果是复合属性则必须采取驼峰命名沈，如果值不是数字，则需要加引号
+        })
+    })
+    //2.给
+</script>
+</body>
+</html>

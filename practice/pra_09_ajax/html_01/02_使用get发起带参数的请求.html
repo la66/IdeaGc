@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-3.3.1/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<button class="btgetinfo">发起带参数的get请求</button>
+
+<script>
+    $(function(){//入口函数
+        $('.btgetinfo').on('click',function(){//绑定事件,进图程序
+            $.get('http://www.liulongbin.top:3006/api/getbooks',{id:1},function(res){
+                console.log(res);
+            });
+        })
+    })
+</script>
+</body>
+</html>

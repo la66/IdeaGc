@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" src="https://code.jquery.com/jquery-3.6.0.slim.min.js">
+    </script>
+    <style>
+    </style>
+</head>
+<body>
+   <button>很好</button>
+   <button>很好</button>
+   <button>很好</button>
+   <button>很好</button>
+   <button>很好</button>
+   <button>很好</button>
+   <button>很好</button>
+   <button>很好</button>
+   <button>很好</button>
+<script>
+   $(function(){
+       //1.隐式迭代给所有的按钮都绑定了点击事件
+       $("button").click(function(){
+           //2.让当前元素颜色变为红色
+           // $(this).css("color","red");
+           //3.让其余的姐妹无素不变色
+           //$(this).siblings().css("color","");
+           //4.链式编程
+           //我的颜色为红色,我的兄弟的颜色为空
+           $(this).css( "color", "red" ).siblings().css("color","");
+           //我的兄弟变为红色,我本身不变颜色
+           $(this).siblings().css('color','red');
+
+       })
+   })
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" id="btn" value="获取历史记录"/>
+<a href="09_History对象2.html">09页面</a>
+<input type="button" id="forward" value="前进"/>
+<script>
+    /*
+    *
+    * */
+    //1.获取
+    var btn=document.getElementById("btn");
+    //2.绑定单击事件
+    btn.onclick=function (){
+        //3.获取
+        var length=history.length;
+        alert(length);
+    }
+    //
+    var forward=document.getElementById("forward");
+    //2.绑定单击事件
+    forward.onclick=function (){
+        //前进
+        //history.forward();
+        history.go();
+    }
+</script>
+</body>
+</html>

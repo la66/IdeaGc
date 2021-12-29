@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone='no'?>
+<?xml-stylesheet type="text/css" href="a.css"?>
+<users>
+    <user id="1">
+        <name>张三</name>
+        <age>23</age>
+        <gender>male</gender>
+        <br/>
+    </user>
+    <user id="2">
+        <name>lisi</name>
+        <age>24</age>
+        <gender>female</gender>
+        <code>
+        <!--if(a &lt;b &amp;&amp; a &gt;c){}-->
+         <![CDATA[
+            if(a < b &&a > c){}
+        ]]]>
+        </code>
+    </user>
+</users>
+<!--
+*基本语法︰
+    1. xml文档的后缀名.xml
+    2. xml第一行必须定义为文档声明
+    3. xml文档中有且仅有一个根标签
+    4．属性值必须使用引号(单双都可)引起来
+    5．标签必须正确关闭
+    6. xml标签名称区分大小写
+*组成部分:
+    1．文档声明
+        1．格式:<?xml属性列表?>2．属性列表︰
+            *version :版本号，必须的属性
+            *encoding:编码方式。告知解析引擎当前文档使用的字符集，默认值:ISO0-8859-1
+            *standalone :是否独立
+                *取值:
+                    yes:不依赖其他文件
+                    no∶依赖其他文件
+    2.指令
+    3.标签
+    4.属性
+        *id唯一
+    5.文本
+        *CDATA区:在该区域中的数据会被原样展示
+
+
+-->

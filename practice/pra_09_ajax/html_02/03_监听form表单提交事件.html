@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-3.3.1/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<form action="/login" id="f1">
+    <input type="text" name="user_name"/><!--文本框-->
+    <input type="password" name="password"/><!--密码框-->
+    <button type="submit">提交</button>  <!--按钮-->
+</form>
+<script>
+    $(function(){//jquer入口函数
+        //第一种方法
+       /* $('#f1').submit(function(){
+            alert('监听到了表单的提交事件1')
+        })*/
+
+        //第二中方法
+        $('#f1').on('submit',function(){
+            alert('监听到了表单的提交事件2')
+        })
+    })
+</script>
+</body>
+</html>

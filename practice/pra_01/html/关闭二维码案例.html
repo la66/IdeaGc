@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+    <style>
+        div {
+            /*border: 1px solid red;*/
+            width: 80%;
+            margin: auto;
+            text-align: center;
+        }
+
+        .img {
+
+        }
+        .er{
+            /*background-color: #2aabd2;*/
+            width: 40%;
+            margin: auto;
+        }
+        .wz{
+            position: relative;
+            bottom:388px ;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <p class="er">来下二维码</p>
+    <img src="../img/二维码.png" class="img" alt="">
+    <i class="fa fa-window-close-o wz" aria-hidden="true"></i>
+</div>
+<script>
+//获取元素
+    var btn=document.querySelector('.wz');
+    var box=document.querySelector('.box');
+    //2绑定事件
+    btn.onclick=function (){
+        box.style.display='none';
+    }
+</script>
+</body>
+</html>

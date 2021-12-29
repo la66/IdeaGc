@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .father{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin: 100px;
+        }
+        .son{
+            width:100px;
+            height: 100px;
+            border: 3px solid red;
+            margin-left: 30px;
+        }
+        .w{
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            margin: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+    <div class="w"></div>
+    <script>
+        //offsetxilie
+        var father=document.querySelector('.father');
+        var son=document.querySelector('.son');
+        //1可以的得到元素便宜的位置 返回不单位的数值
+        console.log(father.offsetTop);
+        console.log(father.offsetLeft);
+        console.log(son.offsetLeft);
+        //2可以得到元素的大小 宽度和高度 包含 padding + border
+        var w=document.querySelector('.w');
+        console.log('宽度:'+w.offsetWidth);
+        console.log('高度:'+w.offsetHeight);
+        //3.返回带有定位的父亲 否则 返回的是body
+        console.log(son.offsetParent);//
+        console.log(son.parentNode);//节点返回父亲 最近一级的父亲 不管定位
+    </script>
+</body>
+</html>

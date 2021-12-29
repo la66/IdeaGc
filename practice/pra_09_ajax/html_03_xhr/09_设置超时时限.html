@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //1.创建xhr对象
+    var xhr = new XMLHttpRequest ()
+
+    //设置超时时间
+    xhr.timeout=30
+    //设置超时以后的处理函数
+    xhr.ontimeout=function(){
+        console.log('请求超时')
+    }
+
+    // 2.调用open()
+    xhr.open('get','http://www.liulongbin.top:3006/api/getbooks')
+
+    xhr.send()
+
+    xhr.onreadystatechange=function(){
+        if(xhr.readyState===4&&xhr.status===200){
+            console.log(xhr.responseText)
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table{
+            width: 500px;
+            margin: 100px auto;
+            border-collapse: collapse;
+            text-align: center;//文本居中
+        }
+        td,th{
+            border: 1px solid #333;
+        }
+        thead tr {
+            height: 40px;
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <table cellspacing="0">
+        <thead>
+            <tr>
+                <th>姓斜</th>
+                <th>科目</th>
+                <th>成绩</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+<!--            <tr>-->
+<!--                <td>魏委珞</td>-->
+<!--                <td>JavaScript</td>-->
+<!--                <td>100</td>-->
+<!--                <td><a href="#">刷除</a></td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td>魏委珞</td>-->
+<!--                <td>JavaScript</td>-->
+<!--                <td>100</td>-->
+<!--                <td><a href="#">刷除</a></td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td>魏委珞</td>-->
+<!--                <td>JavaScript</td>-->
+<!--                <td>100</td>-->
+<!--                <td><a href="#">刷除</a></td>-->
+<!--            </tr>-->
+        </tbody>
+    </table>
+    <script>
+        //1.先去准备好学生的数据
+        var datas=[
+            {name:'张三', subject:'javascript', score:100},
+            {name:'李四', subject:'javascript', score:99},
+            {name:'王五', subject:'javascript', score:88},
+            {name:'赵六', subject:'javascript', score:77},
+        ];
+        //2.在tbody创建行;
+        var tbody=document.querySelector('tbody');
+        for(var i=0;i<datas.length;i++){//根据数组的长度创建(行)
+           //2.1创建tr行createElement
+            var tr=document.createElement('tr');
+            //添加行 appendChild(tr)
+            tbody.appendChild(tr);
+            //2.2行里而创建单元格td 单元格的数量取决于每个刘象里面的属性个数
+            for(var k in datas[i]){//(管理列)
+                //创建单元格
+                var td=document.createElement('td');
+                //把对象甲面的属性值datas[i][k]给td
+                td.innerHTML=datas[i][k];
+                //添加
+                tr.appendChild(td);
+            }
+            //2.3创建删除单元格
+            var td=document.createElement('td');
+            td.innerHTML="<a href='javascript:;'>删除</a>"
+            tr.appendChild(td);//在最后插入
+        }
+        //3.删除操作
+        var a=document.querySelectorAll('a');
+        for (var i=0;i<a.length;i++)
+        {
+            a[i].onclick=function (){
+                //单击a删除a所在的行 node.removeChild(child)
+                tbody.removeChild(this.parentNode.parentNode);
+            }
+        }
+       /* for(var k in obj){
+           k得到的是属性名
+            obj[k]得到是属性值
+        }*/
+    </script>
+</body>
+</html>

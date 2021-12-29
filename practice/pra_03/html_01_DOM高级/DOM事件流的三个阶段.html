@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+      div{
+          border: 1px solid red;
+      }
+      .father{
+          width: 200px;
+          height: 200px;
+          text-align: center;
+          background-color: pink;
+      }
+      .son{
+          width:120px;
+          line-height:120px;
+          margin: auto;
+          margin-top: 18%;
+          background-color: gold;
+      }
+  </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son">son盒子</div>
+    </div>
+    <script>
+        //dom事件流的三个阶段
+        //1.js代码之中只能捕获或者冒泡期中的一个阶段
+        //2.onclik和。。。。只能的到冒泡阶段
+        //3捕获阶段如果addEventListener第三个参数是 true那么则处丁捕获阶段
+        //document->html->body->father->son
+       /* var son=document.querySelector('.son');
+        son.addEventListener('click',function (){
+            alert('son');
+        },true);
+        var father=document.querySelector('.son');
+        father.addEventListener('click',function (){
+            alert('father');
+        },true);*/
+        //4.冒泡阶段 如果addEventListener第三个参数是false 或则那么则处于冒泡阶段
+        //son->ffather->html-document
+        var son=document.querySelector('.son');
+        son.addEventListener('click',function (){
+            alert('son');
+        },false);
+        var father=document.querySelector('.son');
+        father.addEventListener('click',function (){
+            alert('father');
+        },false);
+        document.addEventListener('click',function (){
+            alert('document');
+        },false);
+    </script>
+</body>
+</html>

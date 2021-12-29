@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="demo"></p>
+  <script>
+      //1
+    var a=function(a,b){
+        var a = prompt();
+        var b = prompt();
+        return a*b;
+    }
+    console.log(a());
+    //2
+      var bb={
+          pp:"奔驰",
+          class1:"轿车",
+          color:"red",
+          fullName : function() {
+              return  "行驶" + "刹车";
+          }
+
+      }
+      console.log(bb.pp);
+      // 显示对象中的数据：
+      document.getElementById("demo").innerHTML = bb.fullName();
+      // console.log(bb.fullName);
+      //3.
+      var cc=[1,2,3,4,5];
+      var sum=0;
+      function dd(){
+          for (var i=0;i<cc.length;i++){
+              sum+=cc[i];
+          }
+          return "平均值:"+sum/i;
+      }
+      console.log(dd());
+  </script>
+</body>
+</html>

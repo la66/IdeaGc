@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //定义number类型
+    var num=1;
+    var num2=1.2;
+    var num3=NaN;
+    //输出到页面
+    document.write(num+"----"+typeof(num) +"<br/>");
+    document.write(num2+"----"+typeof(num2) +"<br/>");
+    document.write(num3+"----"+typeof(num3) +"<br/>");
+    //定义到String类型
+    var str ="abc";
+    var str2 ='edf';
+    document.write(str+"<br/>");
+    document.write(str2+"<br/>");
+    //定义boolen
+    var obj=null;
+    var obj2=undefined;
+    var obj3;
+    document.write(obj+"<br/>");
+    document.write(obj2+"<br/>");
+    /*
+    * 比较运算符
+    *       比较方式
+    *           1.类型相同，直接比较
+    *           2.类型不同，先进行类型转化，在比较
+    * */
+    document. write((3 >4) +"<br>");
+    document.write(( "abc" <"acd") +"<br>");
+    document.write( ("123"== 123) +"<br>" );
+    document . write( ("123"===123) +"<br>");
+
+</script>
+</body>
+</html>

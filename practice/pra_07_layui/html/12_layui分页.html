@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>分页</title>
+    <!--layui的核心css文件-->
+    <link href="../layui-v2.6.8/layui/css/layui.css" rel="stylesheet" type="text/css">
+    <!--layui的核心js文件采用模块化引入-->
+    <script src="../layui-v2.6.8/layui/layui.js"></script>
+</head>
+<body>
+<!-- 你的 HTML 代码 -->
+<div id="page"></div>
+<script>
+    //加载laypag模块
+    layui.use("laypage", function () {
+        var laypage = layui.laypage;
+        //加载laypage示例
+        /*laypage.render({
+            elem: "page",//elem绑定的是容器的id属性值,不需要加#
+            count: 100,//总数量,一般从服务器获取
+            limit: 5,//每页显示的数量
+            limits: [5, 10, 20, 30],//每页条数的选择项
+            layout: ['prev', 'page', 'next', 'limit', 'count'],//自定义排版
+            groups: 10,//连续显示的页码数
+        })*/
+        /*切换分页的回调*/
+        laypage.render({
+            elem: 'page',
+            count: 100,//数据总数，从服务端得到,
+            groups: 10,//连续出现的页码个数
+            layout: ['prev','page','next','limit','count'],//自定义排版,
+            limits: [5,10,20],// layout属性设置了limit值，可会出现条数下拉选择框,
+            jump: function (obj,first) {
+                // obj包含了当前分页的所有参数，比如:
+                console.log(obj.curr);//得到当前页，以便向服务端请求对应页的数据。
+                console.log(obj.limit);//得到每页显示的条数
+                //首次不执行
+                if (!first) {
+                    //ldo something}
+                }
+            }
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //1创建formData的示例
+    var fd=new FormData()
+    //2调用append 函数，向fd中追加数据
+    fd.append ('uname','zs')
+    fd.append('upwd','1234565')
+
+    var xhr = new XMLHttpRequest()
+    xhr.open('PoST','http://www.liulongbin.top:3006/api/formdata')
+    xhr.send(fd)
+
+    xhr.onreadystatechange=function(){
+        if(xhr.readyState===4&&xhr.status===200){
+            console.log(xhr.responseText)
+        }
+    }
+
+</script>
+</body>
+</html>

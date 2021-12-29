@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button>点击</button>
+<div></div>
+<script>
+    var btn =document.querySelector('button');
+    var div =document.querySelector('div');
+    btn.addEventListener('click',function(){
+        //
+        location.href='http://www.itcast.cn';
+    })
+    var tiemr=5;
+    setInterval(function(){
+        if(tiemr==0){
+            location.href='http://www.itcast.cn';
+        }else {
+            div.innerHTML = '您将在' + tiemr + '秒钟之后跳转到首页';
+            tiemr--;
+        }
+    },1000)
+
+</script>
+</body>
+</html>

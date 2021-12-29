@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <style>
+        div{
+            width: 140px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <button>显示</button>
+    <button>隐藏</button>
+    <button>切换</button>
+    <div></div>
+<script>
+    $(function(){
+        $("button").eq(0).click(function(){
+            $("div").show(1000,function(){
+                alert(1);
+            });
+        })
+        $("button").eq(1).click(function(){
+            $("div").hide(1000,function(){
+                alert(1);
+            });
+        })
+        $("button").eq(2).click(function(){
+            $("div").toggle(1000);
+        })
+        //.
+    });
+    //380
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img{
+            position: absolute;//绝对定位
+            width: 50px;
+            height: 50px;
+           /* top: 2px;
+            left: ;*/
+        }
+    </style>
+</head>
+<body>
+    <img src="../img/天使.png" alt="">
+    <script>
+        var pic=document.querySelector('img');
+        document.addEventListener('mousemove',function(e){
+           //mousemove 移动鼠标就会触发事件
+            console.log(1);
+            //2核心原理:没次鼠标哟东，我们都会获得新的鼠标坐标，把这个坐标给图片的top和left
+            var x=e.pageX;
+            var y=e.pageY;
+            console.log('x的坐标:'+x,'y的坐标:'+y);
+            pic.style.left=x+'px';
+            pic.style.top=y+'px';
+        })
+    </script>
+</body>
+</html>

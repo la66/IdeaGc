@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script>
+        window.onload=function() {
+            var btn = document.querySelector('button');
+            btn.addEventListener('click', function () {
+                alert('点击我')
+            })
+        }
+        window.addEventListener('load',function(){
+            var btn =document.querySelector('button');
+            btn.addEventListener('click',function(){
+                alert('点击我');
+            })
+        })
+        window.addEventListener('load',function(){
+            alert(22);
+        })
+        window.addEventListener('DOMContentLoaded',function(){
+            alert(33);
+        })
+    </script>
+</head>
+<body>
+<button>点击</button>
+</body>
+</html>

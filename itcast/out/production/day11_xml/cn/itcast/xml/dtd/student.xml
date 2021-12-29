@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE students SYSTEM "student.dtd"><!--约束:本地:<!DOCTYPE根标签名sYSTEM "dtd文件的位置">-->
+<students>
+    <student number="itcast_0001">
+    <name>tom</name>
+    <age>18</age>
+    <sex>male</sex>
+    </student>
+</students>
+<!--
+*DTD :
+    *引人dtd文档到xml文档中
+        *内部dtd:将约束规则定义在xml文档中
+        *外部dtd:将约束的规则定义在外部的dtd文件中
+            *本地:<!DOCTYPE根标签名sYSTEM "dtd文件的位置">
+            *网络:<lDOCTYPE根标签名PUBI[Ic "dtd文件名字”"dtd文件的位置">
+-->

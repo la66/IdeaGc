@@ -1,0 +1,30 @@
+/*第四单元 项目 4-2 用户注册页面*/
+div{
+    background-color: #1b6d85;
+}
+*:focus{
+    outline:none;
+}
+.contact_from{
+    width: 70%;
+    position: absolute;/*绝对定位*/
+    top: 2%;
+    left: 25%;
+}
+.contact_from h2, .contact_from span{
+    font-family: Gabriola,Times,"Times New Roman",Serif;
+}
+.form_hint{
+    font-size: 11px;
+
+}
+.contact_from ul{
+    width: 750px;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+.contact_from li{
+    padding: 12px;
+
+}

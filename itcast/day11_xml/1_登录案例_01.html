@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+body{
+    background: #00BFFF;
+}
+.box{
+    border: 2px solid white;
+    border-radius: 5px;
+    width: 40%;
+    height: 450px;
+    margin: auto;
+    margin-top: 50px;
+}
+.img_1{
+    border-radius: 100px;
+    position: relative;
+    top: -50px;
+    left: 200px;
+}
+.use-1{
+    /*border: 1px solid white;*/
+    width: 70%;
+    border-radius: 5px;
+    background: white;
+    margin-left: 15%;
+}
+.img-2{
+    margin-top: 10px;
+    line-height: 30px;
+    position: relative;
+    top: 4px;
+
+}
+.img-3{
+    position: relative;
+    top: 4px;
+
+}
+.pass-1{
+    border: 1px solid white;
+    width: 70%;
+    border-radius: 5px;
+    background: white;
+    margin-left: 15%;
+    margin-top: 50px;
+}
+#btn_sub{
+    border: #4169E1;
+    width: 70%;
+    height: 30px;
+    margin-top: 50px;
+    background: #4169E1;
+    margin-left: 15%;
+}
+#password{
+    border: white;
+    height: 30px;
+}
+#username{
+   height: 30px;
+    border: white;
+    /*border: 1px solid white;*/
+    position: relative;
+    top: -2px;
+
+}
+.c{
+    margin-top: 50px;
+    margin-left: 15%;
+}
+#firstCb{
+    margin-left: 20px;
+}
+.c-1{
+    margin-left: 45px;
+}
+</style>
+<body>
+<div class="box">
+    <img class="img_1" src="img/logo.jpg" width="100px" />
+    <form action="#" id="form" method="get">
+        <div class="use-1">
+            <label for="username">
+                <img  class="img-2" src="img/user.jpg" alt="" width="30px" height="20px">
+            </label>
+            <input id="username" name="username" placeholder="username" type="text"/>
+        </div>
+        <div class="pass-1">
+            <img  class="img-3" src="img/password.jpg" alt="" width="30px" >
+        <input id="password" name="password" placeholder="***********" type="password"/>
+        </div>
+        <input id="btn_sub" type="submit" value="LOGIN"/>
+        <div class="c">
+            <input type="checkbox" name="cb" id="firstCb"/>
+        <span class="c-2">Remember me</span>
+        <span class="c-1"> <i> Forgot Password?</i></span>
+        </div>
+    </form>
+</div>
+</body>
+</html>

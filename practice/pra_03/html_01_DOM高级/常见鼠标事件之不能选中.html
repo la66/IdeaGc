@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<p>您不能复制或者选中</p>
+    我是一段不愿意分享的文字
+    <script>
+        //不显示右键菜单（例如不能复制）
+        //1contextmenu 禁用鼠标右键
+        document.addEventListener('contextmenu',function (e){
+            e.preventDefault();//
+        })
+        //2.禁止选中文字selectstart
+        document.addEventListener('selectstart',function (e){
+            e.preventDefault()
+        })
+    </script>
+</body>
+</html>

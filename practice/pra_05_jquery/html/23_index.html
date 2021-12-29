@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+
+        .king {
+            width: 852px;
+            margin: 100px auto;
+            background: #1E90FF no-repeat;
+            overflow: hidden;
+            padding: 10px;
+        }
+
+        .king ul {
+            overflow: hidden;
+        }
+
+        .king li {
+            position: relative;
+            float: left;
+            width: 69px;
+            height: 69px;
+            margin-right: 10px;
+        }
+
+        .king li.current {
+            width: 224px;
+        }
+
+        .king li.current .big {
+            display: block;
+        }
+
+        .king li.current .small {
+            display: none;
+        }
+
+        .big {
+            width: 224px;
+            display: none;
+        }
+
+        .small {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 69px;
+            height: 69px;
+            border-radius: 5px;
+        }
+    </style>
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function () {
+            //1.获取元素
+            //鼠标经过某个小li有两步揉作:
+            $(".king li").mouseenter(function () {
+                // 1.当前小1i 宽度变为224px，同叫甲面的小图片淡出、大图片淡入
+                $(this).stop().animate({
+                    width: 224
+                }, 200).find(".small").stop().fadeOut().siblings(".big").stop().fadeIn();
+                //2.其余兄弟小li宽度变为69px.小图片淡入，大图片淡出
+                $(this).siblings("li").stop().animate({
+                    width: 69
+                }).find(".small").stop().fadeIn().siblings(".big").stop().fadeOut();
+                //2.给
+            })
+        });
+    </script>
+</head>
+<body>
+<div class="king">
+    <ul>
+        <li class="current">
+            <a href="">
+                <img src="../img_03/img_7.png" alt="" class="small">
+                <img src="../img_03/img.png" alt="" class="big">
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img src="../img_03/img_8.png" alt="" class="small">
+                <img src="../img_03/img_1.png" alt="" class="big">
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img src="../img_03/img_9.png" alt="" class="small">
+                <img src="../img_03/img_2.png" alt="" class="big">
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img src="../img_03/img_10.png" alt="" class="small">
+                <img src="../img_03/img_3.png" alt="" class="big">
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img src="../img_03/img_11.png" alt="" class="small">
+                <img src="../img_03/img_4.png" alt="" class="big">
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img src="../img_03/img_12.png" alt="" class="small">
+                <img src="../img_03/img_5.png" alt="" class="big">
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img src="../img_03/img_13.png" alt="" class="small">
+                <img src="../img_03/img_6.png" alt="" class="big">
+            </a>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

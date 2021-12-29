@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script crossorigin="anonymous" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" src="https://code.jquery.com/jquery-3.6.0.slim.min.js">
+    </script>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+<span></span>
+<script>
+   //1.DOM对象:用原生js获取过来的对象就是DOM别象
+   var myDiv=document.querySelector('div');//myDiv是Dom对象
+   console.dir(myDiv);
+   var mySpan=document.querySelector('span');//myDiv是Dom对象
+   console.dir(mySpan);
+
+   //2. jQuery对象:用jquery方式获取过来的对象是jQuery对象。本质:通过$把DON元素进行了包装
+   $('div');// $('div')是一个jQuery对象
+   $('span');// $('span')是一个jQuery对象
+   console.dir($('div'));
+   //3. jQuery 对象只能使用jQuery方法，DOM对象则使用原生的 JavaScirpt属性和方法
+    myDiv.style.display='none';
+    //myDiv.hide()是一个dom对象不能使用jquery里的hide方法
+    //这个$('div')是一个jQuery刘象不能使用原生js 的属性和方法
+    // $('div').style.display='none' 这个是错误的
+
+</script>
+</body>
+</html>

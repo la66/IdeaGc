@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <script>
+        //常用键盘事件
+        //1.Keyup 按键谈起时被触发
+           /* document.onkeyup=function(){
+                console.log('我被弹起来了')
+            }*/
+        document.addEventListener('keyup',function(e){
+            console.log('我被弹起来了')
+        })
+        //2.keydown 按键按下的时侯触发 能识别功能键比如ctrl shift左右箭头啊
+        document.addEventListener('keydown',function(e){
+            console.log('我被弹起来了')
+        })
+        //3.Keypress按键按下的时候触发 不能识别功能键比如ctrl shift左右箭头啊
+        //4.三个事件的执行顺序keydown -- keypress -- keyup
+    </script>
+</body>
+</html>

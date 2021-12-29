@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--
+##事件简单学习
+    *功能︰某些组件被执行了某些操作后，触发某些代码的执行。
+    *造句:xxx被xxx,我就×××
+        我方水晶被摧毁后，我就责备对友。
+        本地方水晶被摧毁后，我就夸奖自己。
+    *如何绑定事件
+        1．事件: onclick---单击事件
+        2.
+-->
+</head>
+<body>
+<img id="light" src="img/img_1.png" onclick="fun()">
+<img id="light2" src="img/img_1.png" onclick="">
+<script>
+    function fun() {
+        alert('我被点了');
+    }
+    function fun2() {
+        alert('我又被点了');
+    }
+    //1获取light2对象
+    var light2=document.getElementById("light2");
+    //2绑定事件
+    light2.onclick=fun2;
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" src="https://code.jquery.com/jquery-3.6.0.slim.min.js">
+    </script>
+    <style>
+        div{
+            width: 150px;
+            height: 150px;
+            background: pink;
+            margin: auto;
+            transition: all 0.5s;
+        }
+        .current{
+            background-color: red;
+            transform: rotate(360deg);//旋转360‘
+
+        }
+    </style>
+</head>
+<body>
+    <div class="current"></div>
+<script>
+    //操作样式之css样式
+    $(function(){
+        //1.添加类 addClass()
+       /* $("div").click(function(){
+            // $(this).addClass("current");
+        });*/
+        //2.删除类 removeClass()
+      /*  $("div").click(function(){
+            $(this).removeClass("current");
+        });*/
+        //3.切换类toggleClass()
+          $("div").click(function(){
+              $(this).toggleClass("current");
+          });
+    })
+
+</script>
+</body>
+</html>

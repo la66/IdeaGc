@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <button>按钮1</button>
+    <button>按钮2</button>
+    <button>按钮3</button>
+    <button>按钮4</button>
+    <button>按钮5</button>
+    <script>
+        //.获取所有的元素
+        var btns=document.getElementsByTagName('button');
+        //btns得到的是伪数组里面的每一个元素 btns[i]
+        for(var i=0;i<btns.length;i++){
+            btns[i].onclick=function (){
+                //排除其他的元素的颜色
+                for (var i=0;i<btns.length;i++){
+                    btns[i].style.backgroundColor='';
+                }
+               this.style.backgroundColor='pink';
+            }
+        }
+    </script>
+</body>
+</html>

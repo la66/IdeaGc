@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+   <script src="/js/jquery-3.3.1.min.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+    <ul>
+        <li>多个里面多筛选几个</li>
+        <li>多个里面多筛选几个</li>
+        <li>多个里面多筛选几个</li>
+        <li>多个里面多筛选几个</li>
+        <li>多个里面多筛选几个</li>
+    </ul>
+    <ol>
+        <li>多个里面多筛选几个</li>
+        <li>多个里面多筛选几个</li>
+        <li>多个里面多筛选几个</li>
+        <li>多个里面多筛选几个</li>
+        <li>多个里面多筛选几个</li>
+    </ol>
+<script>
+    //1.获取元素
+    //2.给
+    $(function(){
+        //1.获取第一个
+        $("ul li:first").css('color','red');
+        //2.获取最后一个
+        $("ul li:last").css('color','red');
+        //
+        $("ul li:eq(2)").css('color','blue');
+        //奇数行
+        $("ol li:odd").css('color','#9932CC');
+        //偶数行
+        $("ol li:even").css('color','pink');
+        //
+    })
+</script>
+</body>
+</html>

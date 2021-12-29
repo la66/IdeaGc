@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/template.js"></script>
+</head>
+<body>
+<div id="user-box"></div>
+
+
+
+<script type="text/html" id="tp1-user">
+    <div>姓名: {{name}}</div>
+    <div>年龄: {{ age }}</div>
+    <div>性别: {{ gender}}</div>
+    <div>住址: {{address }}</div>
+</script>
+
+<script>
+    //定义数据
+    var data={
+        name:'zs',
+        age:28,
+        gender:'男',
+        address:'北京顺义马坡'
+    }
+    //调用模板引擎
+    var htmlstr = template('tpl-user',data)
+
+    document.getElementById('user-box').innerHTML=htmlstr
+
+</script>
+</body>
+</html>

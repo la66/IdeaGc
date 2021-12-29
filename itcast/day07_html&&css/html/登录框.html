@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            width: 100%;
+            background: url("../img/3.png");
+            background-size: cover; /* 让背景图基于容器大小伸缩 */
+            background-attachment: fixed; /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */
+            /*此条属性必须设置否则可能无效*/
+        }
+        form{
+            width: 343px;
+            height:500px;
+            /*此条属性必须设置否则可能无效*/
+            padding: 30px;
+            border: 1px solid rgba(0,0,0,.2);
+            border-radius: 5px;
+            background: rgba(0,0,0,0.5);
+            box-shadow: 0 0 13px 3px rgba(0,0,0,.5);
+            overflow: hidden;/*隐藏内特容*/
+            margin: auto;
+            margin-top:50px;
+        }
+        input{
+            width: 276px;
+            height: 48px;
+            border: 1px solid rgba(255,255,255,.4);
+            font-family: 'Source Code Pro',sans-serif;
+            font-size: 18px;
+            color: #fff;
+            padding-left: 20px;
+            padding-right: 45px;
+            margin-bottom: 20px;
+            background-color: rgba(255,255,255,.4);
+        }
+        .boder-radius{
+            width: 200px;
+            height: 200px;
+            margin: 40px auto;
+            background: url("../img/2.jpg") no-repeat center center;
+            border: 5px solid rgba(255,255,255,.4);
+            border-radius: 200px;
+        }
+        ::-webkit-input-placeholder{
+            color: #fff;
+        }
+        input:focus{
+            background-color: rgba(0,0,0,0.2);
+            box-shadow: 0 0 5px 1px rgba(255,255,255,0.5);
+            overflow: hidden;
+        }
+        #btn_sub{
+            width: 138px;
+            height: 44px;
+            border-radius: 4px;
+            margin: 0 auto;
+            background: #00B0DC;
+            padding: 10.5px 21px;
+            color: #e1e1e1;
+        }
+        #btn_sub:hover{
+            border: 1px solid #253737;
+            text-shadow: 0 1px 0 #333333;
+            background: #00B0DC;
+            color: #fff;
+        }
+        #btn_sub:active{
+            margin-top: 1px;
+            text-shadow: 0 -1px 0 #333333;
+            border: 1px solid #253737;
+            background: #00B0DC;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<div class="dl">
+    <form action="#" method="post">
+        <div class="boder-radius">
+
+        </div>
+        <table >
+            <tr>
+<!--                <td class="td_left"><label for="username">用户名:</label></td>-->
+                <td class="td_right"><input type="text" name="username" id="username" placeholder="请输入用户名"/></td>
+            </tr>
+            <tr>
+<!--                <td class="td_left"><label for="password">密码:</label></td>-->
+                <td class="td_right"><input type="password" name="password" id="password" placeholder="请输入密码"/></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="submit" id="btn_sub" value="注册"/></td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>

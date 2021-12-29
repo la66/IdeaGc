@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单</title>
+    <!--layui的核心css文件-->
+    <link href="../layui-v2.6.8/layui/css/layui.css" rel="stylesheet" type="text/css">
+    <!--layui的核心js文件采用模块化引入-->
+    <script src="../layui-v2.6.8/layui/layui.js"></script>
+</head>
+<body>
+<!-- 你的 HTML 代码 -->
+
+<!--1.在一个容器中设定class="layui-form”来标识一个表单元素块-->
+<form class="layui-form" action="" method="">
+    <div class="layui-form-item">
+        <label class="layui-form-label">标签区域</label>
+        <div class="layui-input-block">
+            <input type="text" name="title" required lay-verify="required" placeholder="请输入标题" autocomplete="off"
+                   class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">开关</label>
+        <div class="layui-input-inline">
+            <input type="checkbox" name="hobby" title="唱歌"/>
+            <input type="checkbox" name="hobby" lay-skin="switch" checked/>
+            <input type="checkbox" name="hobby"lay-skin="switch" checked lay-text="on|off"/>
+            <input type="checkbox" name="hobby" lay-skin="switch" checked lay-text="打开|关闭"/>
+        </div>
+    </div>
+</form>
+<!--加载模块-->
+<script>
+    //加载form模块
+    layui.use("form", function () {
+        var form = layui.form;
+    })
+</script>
+</body>
+</html>

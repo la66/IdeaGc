@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<script>
+    //1立即执行函数:不需要发调用，立马能自己执行的函数
+    /*function fn(){
+        console.log(11);
+    }
+    fn();*/
+    //2.写法 也可以传递参数
+    //2.1(function(){})() 或者 2.2(function(){}());
+    //2.1
+    (function(a){
+        console.log(a)
+    })(1);//外面的第二个小括号可以看作是调用函数[里面的是实参]
+    //2.2
+    (function(a,b){
+        console.log(a+b);
+    }(1,2));
+    //3作用: 创建了一个独立的作用域
+</script>
+</body>
+</html>

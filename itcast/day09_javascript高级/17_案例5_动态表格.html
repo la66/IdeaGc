@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            border: 1px solid;
+            margin: auto;
+            width: 500px;
+        }
+
+        td, th {
+            text-align: center;
+            border: 1px solid;
+        }
+
+        div {
+            text-align: center;
+            margin: 50px;
+        }
+
+        .out {
+            background-color: white;
+        }
+
+        .over {
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <input type="text" id="id" placeholder="请输入编号"/>
+    <input type="text" id="name" placeholder="请输入姓名"/>
+    <input type="text" id="gender" placeholder="请输入性别"/>
+    <input type="button" value="添加" id="btn_add"/>
+</div>
+<table>
+    <caption>学生信息表</caption>
+    <tr>
+        <th><input type="checkbox" name="cb" id="firstCb"/></th>
+        <th>编号</th>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>操作</th>
+    </tr>
+    <tr>
+        <th><input type="checkbox" name="cb"/></th>
+        <td>1</td>
+        <td>令狐冲</td>
+        <td>男</td>
+        <td><a href="javascript:void(0);" onclick="delTr(this);">删除</a></td>
+    </tr>
+    <tr>
+        <th><input type="checkbox" name="cb"/></th>
+        <td>2</td>
+        <td>任我行</td>
+        <td>男</td>
+        <td><a href="javascript:void(0);" onclick="delTr(this);">删除</a></td>
+    </tr>
+    <tr>
+        <th><input type="checkbox" name="cb"/></th>
+        <td>3</td>
+        <td>岳不群</td>
+        <td>?</td>
+        <td><a href="javascript:void(0);" onclick="delTr(this);">删除</a></td>
+    </tr>
+</table>
+<div>
+    <input type="button" id="selectAll" value="全选"/>
+    <input type="button" id="unSelectAll" value="全不选"/>
+    <input type="button" id="selectRev" value="反选"/>
+</div>
+<script>
+
+    //使用inner
+    document.getElementById("btn_add").onclick = function () {
+        //2获取本框的内容
+        var id = document.getElementById("id").value;
+        var name = document.getElementById("name").value;
+        var gender = document.getElementById("gender").value;
+        //获取
+
+        //获取table
+        var table = document.getElementsByTagName("table")[0];
+        //追加一行
+        table.innerHTML += "<tr>\n" +
+            "<td>" + id + "</td>\n" +
+            "<td>" + name + "</td>\n" +
+            "<td>" + gender + "</td>\n" +
+            "<td><a href=\"javascript:void(0);\" onClick=\"delTr(this);\">删除</a></td>\n" +
+            "</tr>";
+
+    }
+
+    //删除方法
+    function delTr(obj) {
+        var table = obj.parentNode.parentNode.parentNode;
+        var tr = obj.parentNode.parentNode;
+        table.removeChild(tr);
+
+    }
+
+    //案例5
+    //1.在页面加载完成之后 205
+    window.onload = function () {
+        //2.给全选按钮绑定单击事件
+        document.getElementById("selectAll").onclick = function () {
+            //全选
+            //1.获取所有的chekbox
+            var cbs = document.getElementsByName("cb");
+            //2.便历
+            for (var i = 0; i < cbs.length; i++) {
+                cbs[i].checked = true;
+            }
+        }
+        document.getElementById("unSelectAll").onclick = function () {
+            //全不选
+            //1.获取所有的chekbox
+            var cbs = document.getElementsByName("cb");
+            //2.便历
+            for (var i = 0; i < cbs.length; i++) {
+                cbs[i].checked = false;
+            }
+        }
+        document.getElementById("selectRev").onclick = function () {
+            //反选
+            //1.获取所有的chekbox
+            var cbs = document.getElementsByName("cb");
+            //2.便历
+            for (var i = 0; i < cbs.length; i++) {
+                //状态相反
+                cbs[i].checked = !cbs[i].checked;
+            }
+        }
+        document.getElementById("firstCb").onclick = function () {
+            //第一个cb
+            //1.获取所有的chekbox
+            var cbs = document.getElementsByName("cb");
+            //2.获取第一个cb
+            for (var i = 0; i < cbs.length; i++) {
+                //设置每一个cb的状态和第一个的状态一致
+                cbs[i].checked = this.checked;
+            }
+        }
+        //给所有的tr绑定鼠标移到元素之上和移除元素之上事件
+        var trs = document.getElementsByTagName("tr");
+        for (var i = 0; i < trs.length; i++) {
+            //移到元素之上
+            trs[i].onmouseover = function() {
+                this.className="over";
+            }
+            //移除元素之上
+            trs[i].onmouseout = function() {
+                this.className="out";
+            }
+        }
+    }
+</script>
+</body>
+</html>

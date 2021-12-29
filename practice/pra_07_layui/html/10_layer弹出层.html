@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>T</title>
+    <!-- 1.layer独立的使用 -->
+    <!--<link href="../layer-v3.5.1/layer/theme/default/layer.css" rel="stylesheet" type="text/css">
+      <script src="../js/jquery-3.3.1.min.js"></script>
+      <script src="../layer-v3.5.1/layer/layer.js"></script>-->
+
+    <!--2.layui的核心css文件-->
+    <link href="../layui-v2.6.8/layui/css/layui.css" rel="stylesheet" type="text/css">
+    <!--layui的核心js文件采用模块化引入-->
+    <script src="../layui-v2.6.8/layui/layui.js"></script>
+
+</head>
+<body>
+<!-- 你的 HTML 代码 -->
+<!--独立使用
+    1.作为独立的使用
+        在layer独立版本官网下载组件包，在需要使用layer的页面加载1.8版本以上的jquery的js文件和layer.js文件
+    2.layui模块化使用
+        只需要引入layui的css与js文件即可 在script中使用layui.use()加载模块
+
+-->
+
+<script>
+    //使用layer
+    // layer.msg("你好呀");
+    //加载模块
+    layui.use("layer", function () {
+        var layer = layui.layer;
+        layer.msg("你好呀");
+        /*信息框*/
+       /* layer.open({
+            type: 0,
+            // title: "系统消息",
+            title: false,//不显示标题
+            title:['标题','color:red'],
+            //content可以传入任意的文本或html
+            content: "Hello"
+        }); */
+        /*页面层*/
+       /* layer.open({
+            type: 1,
+            title: "系统消息",
+            //content可以传入任意的文本或html
+            content: "<div style='height: 200px;width: 400px'>Hello</div>"
+        });*/
+        /*iframe*/
+       /* layer.open({
+            type: 2,
+            title: "系统消息",
+            //content是一个URL，如果你不想让iframe出现滚动条，你还可以content: [ 'url', 'no']content:"http:/www.baidu.com"]
+            content: ["http://www.baidu.com"],
+            // area:'500px'//设置宽度，高度自适应
+            area:['500px','300px']//设置宽高
+        })*/
+        /*tips层*/
+        /*layer.open({
+        type: 4,
+        content:['内容',‘#sp']//数组第二项即吸附元素选择器或者DOM
+        });*/
+        //eg1
+        //layer.alert('酷毙了'，{icon:2});
+        //eg2
+        // layer.msg('不开心。。', {icon: 5});
+        // eg3
+        layer.load(1);//风格1的加载
+    });
+</script>
+</body>
+</html>

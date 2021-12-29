@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*div{
+            width: 100px;
+            height: 200px;
+            background-color: pink;
+            display: none;
+        }*/
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .wrap{
+            width: 345px;
+            border:1px solid #1E90FF;
+            height: 275px;
+            margin: auto;
+            margin-top: 50px;
+            background-color: #D3D3D3;
+            border-radius: 6px;
+        }
+        li{
+            list-style-position: inside;
+            list-style-type: none;
+            float: left;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+        img{
+            border:1px solid #1E90FF;
+            border-radius: 6px;
+            display: block;
+        }
+    </style>
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function() {
+            //鼠标进入的时候,其他的li标签透明度:0.5
+                $(".wrap li").hover(function(){
+                    $(this).siblings().stop().fadeTo(400,0.5);
+                }),function(){
+                    //鼠标离开，其他li透明度改为1
+                    $(this).siblings().fadeTo(400,2);
+                }}
+        );
+    </script>
+</head>
+<body>
+<div class="wrap">
+    <ul>
+        <li><a href="#"><img src="../img_02/img1.png" width="100" height="120" alt=""></a></li>
+        <li><a href="#"><img src="../img_02/img2.png" width="100" height="120" alt=""></a></li>
+        <li><a href="#"><img src="../img_02/img3.png" width="100" height="120" alt=""></a></li>
+        <li><a href="#"><img src="../img_02/img4.png" width="100" height="120" alt=""></a></li>
+        <li><a href="#"><img src="../img_02/img5.png" width="100" height="120" alt=""></a></li>
+        <li><a href="#"><img src="../img_02/img6.png" width="100" height="120" alt=""></a></li>
+
+    </ul>
+</div>
+<!--    <button>淡入效果</button>-->
+<!--    <button>淡出效果</button>-->
+<!--    <button>淡入淡出切换</button>-->
+<!--    <button>修改透明度</button>-->
+<!--    <div></div>-->
+<script>
+  /* $(function(){
+       $("button").eq(0).click(function(){
+           //淡入
+           $("div").fadeIn();
+
+       })
+       $("button").eq(1).click(function(){
+           //淡出
+           $("div").fadeOut();
+       })
+       $("button").eq(2).click(function(){
+           //淡入淡出切换
+           $("div").fadeToggle(1000);
+       })
+       $("button").eq(3).click(function(){
+           //修改透明度 fadeTo(）这个速度和透明度要必须写
+           $("div").fadeTo(1000,0.5);
+       })
+   })*/
+</script>
+</body>
+</html>

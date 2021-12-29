@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" src="https://code.jquery.com/jquery-3.6.0.slim.min.js">
+    </script>
+    <style>
+    </style>
+</head>
+<body>
+   <button>好的</button>
+   <button>好的</button>
+   <button>好的</button>
+   <button>好的</button>
+   <button>好的</button>
+   <button>好的</button>
+   <button>好的</button>
+<script>
+   $(function(){
+       //排他思想
+       //隐式迭代 可以给所有的按钮都绑定点击事件
+       $('button').click(function(){
+            //2.当前的元素变化背景颜色
+           $(this).css('background','pink');
+           //3.其余的兄弟去掉背景颜色 隐式迭代
+           $(this).siblings('button').css('background','');
+       });
+   })
+</script>
+</body>
+</html>

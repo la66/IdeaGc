@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="spring-beans-5.3.9">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/da05_dataSource_jdbcTemplate/libs/spring-beans-5.3.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/da05_dataSource_jdbcTemplate/libs/spring-core-5.3.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/da05_dataSource_jdbcTemplate/libs/spring-jcl-5.3.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/da05_dataSource_jdbcTemplate/libs/spring-jdbc-5.3.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/da05_dataSource_jdbcTemplate/libs/spring-tx-5.3.9.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

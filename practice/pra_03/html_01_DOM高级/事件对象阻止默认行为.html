@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 100px;
+            height: 30px;
+            background-color: skyblue;
+        }
+        a{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div>123</div>
+    <a href="https://www.baidu.com">百度</a>
+    <form action="http://www.baidu.com">
+        <input type="submit" value="提交" name="sub">
+    </form>
+    <script>
+       //常见事件对象的属性和方法
+       //1.返回事件类型
+       var div=document.querySelector('div');
+       div.addEventListener('click',fn);
+
+       function  fn(e){
+           console.log(e.type);//事件类型(type)
+       }
+       //2.阻止默认行为(事件) 让链接不跳转
+       var a=document.querySelector('a');
+       a.addEventListener('click',function(e){
+           e.preventDefault();//dom标准写法
+       });
+
+    </script>
+</body>
+</html>

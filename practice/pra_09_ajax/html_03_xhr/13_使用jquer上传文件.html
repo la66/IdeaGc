@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-3.3.1/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+
+<input type="file" id="file1"/>
+<button id="btnUpload">上传文件</button>
+<img src="../img/旋转.png"id="loading" style="display: none;"/>
+<script>
+    $(function(){
+        //监听ajax
+        $(document).ajaxStart(function(){
+            $('#loading').show()
+        })
+        //自jQuery版本1.8 起，该方法只能被附加到文档
+        $(document).ajaxStop(function() {
+            $( '#loading').hide()
+        })
+
+        $('#btnUpload').on('click',function(){
+            // 1．将jQuery对象转化为DOM对象，并获取选中的文件列表
+            var files = $('#file1')[0].files
+            // 2．判断是否选择了文件
+            if (files.length <= 0) {
+                return alert('请选择图片后再上传!')
+            }
+            var fd =new FormData()
+            fd.append('avatar',files[0])
+            //
+            $.ajax({
+                method:'POST',
+                url:'http://www.liulongbin.top:3006/api/upload/avatar',
+                data:fd,
+                processData: false,
+                contentType:false,
+                success:function(res){
+                    console.log(res)
+                }
+            })
+        })
+    })
+
+</script>
+</body>
+</html>

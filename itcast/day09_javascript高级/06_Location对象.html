@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loction对象</title>
+    <script>
+        //reload方法
+    </script>
+</head>
+<body>
+<input type="button" id="btn" value="刷新"/>
+<script>
+    //reload方法，定义一个按钮，点击按钮，刷新当前的页面
+    //1.获取当前的按钮
+    var btn=document.getElementById("btn");
+    //2.绑定事件
+    btn.onclick=function (){
+        //3.刷新页面
+        Location.reload();
+    }
+    //2.获取hre
+    var href =Location.href();
+    alert(href);
+</script>
+</body>
+</html>

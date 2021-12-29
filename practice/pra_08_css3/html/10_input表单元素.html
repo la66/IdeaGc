@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>input表单元素</title>
+</head>
+<body>
+<form action="demo" name="" method="post" >
+<!--    text文本框用户可以里面输入任何文字-->
+    用户名:<input type="text" name="username"><br>
+<!--password密码 用户看不见输入的密码-->
+    密码:<input type="password" name="password">
+    <br>
+    <!-- radio单选按钮可以实现多选一-->
+    <!-- name是表单元素名字这里性别单选按钮必须有相同的名字name才可以实现多选1-->
+    <!--单选按钮和复选框可以设置checked属性，当页面打开的时候就可以默认选中这个按钮-->
+    性别: 男<input type="radio" name="sex"> 女<input type="radio" name="sex">
+    <br>
+    <!--单瑙按钮可以实现多选-->
+    爱好: 吃饭 <input type="checkbox" name="hobby">
+    睡觉<input type="checkbox" name="hobby">
+    大歌<input type="checkbox" name="hobby">
+    <br>
+<!--点击了提交按钮,可以把表单域form 里面的表单元素里面的值提交给后台服务器-->
+    <input type="submit">
+    <!--重置按钮可以还原表单元紊初始的默认状态-->
+    <input type="reset">
+    <!--普通按钮button后期结合js搭配使用-->
+    <input type="button" value="提交数据"><br>
+    <!--文件域 使用场景 上传文件使用的-->
+    上传头像:<input type="file"/>
+
+
+</form>
+</body>
+</html>

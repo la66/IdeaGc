@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/pra_01/pra_01.iml" filepath="$PROJECT_DIR$/pra_01/pra_01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pra_02/pra_02.iml" filepath="$PROJECT_DIR$/pra_02/pra_02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pra_03/pra_03.iml" filepath="$PROJECT_DIR$/pra_03/pra_03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pra_04/pra_04.iml" filepath="$PROJECT_DIR$/pra_04/pra_04.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pra_05_jquery/pra_05_jquery.iml" filepath="$PROJECT_DIR$/pra_05_jquery/pra_05_jquery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pra_06_jquery属性/pra_06_jquery属性.iml" filepath="$PROJECT_DIR$/pra_06_jquery属性/pra_06_jquery属性.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pra_07_layui/pra_07_layui.iml" filepath="$PROJECT_DIR$/pra_07_layui/pra_07_layui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pra_08_css3/pra_08_css3.iml" filepath="$PROJECT_DIR$/pra_08_css3/pra_08_css3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pra_09_ajax/pra_09_ajax.iml" filepath="$PROJECT_DIR$/pra_09_ajax/pra_09_ajax.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-3.3.1/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<button id="btnpost">发起post请求</button>
+
+<script>
+    $(function(){//入口函数
+        $('#btnpost').on('click',function(){//绑定事件,进图程序
+            $.post('http://www.liulongbin.top:3006/api/addbook',{bookname:'水浒传',author:'斯奈庵',
+            publisher:'出版社'},function(res){
+                console.log(res);
+            });
+        })
+    })
+</script>
+</body>
+</html>

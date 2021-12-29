@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" src="https://code.jquery.com/jquery-3.6.0.slim.min.js">
+    </script>
+    <style>
+    </style>
+</head>
+<body>
+    <ol>
+        <li>我是ol的li</li>
+        <li>我是ol的li</li>
+        <li class="item">我是ol的li</li>
+        <li>我是ol的li</li>
+        <li>我是ol的li</li>
+    </ol>
+    <ul>
+        <li>我是ul的li</li>
+        <li>我是ul的li</li>
+        <li>我是ul的li</li>
+        <li>我是ul的li</li>
+        <li>我是ul的li</li>
+    </ul>
+    <div class="current">我有current</div>
+    <div>我没有current</div>
+<script>
+    //注意一下 都是方法 带括号
+    $(function(){
+        //1.兄弟元素 siblings()不包括自身
+        // $("ol .item").siblings('li').css("color","red");
+        //1.1之后
+        // $("ol .item").nextAll('li').css("color","#0000FF");
+        //1.1之前
+        // $("ol .item").prevAll('li').css("color","#0000FF");
+
+        //2.第n个元素
+        //2(1).我们可以利用选择器的方式选择
+        $("ul li:eq(2)").css("color","red");
+        //2(2).我们可以利用选择方法的方式选择 更推荐这种方法
+
+        $("ul li").eq(4).css("color","red");
+
+        //3.判断是否有某个类名
+        $('div').hasClass('current');
+        console.log( $('div:first').hasClass('current'))
+    })
+
+</script>
+</body>
+</html>

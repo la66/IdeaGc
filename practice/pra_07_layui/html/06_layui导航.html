@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--layui的核心css文件-->
+    <link href="../layui-v2.6.8/layui/css/layui.css" rel="stylesheet" type="text/css">
+    <!--layui的核心js文件采用模块化引入-->
+    <script src="../layui-v2.6.8/layui/layui.js"></script>
+</head>
+<body>
+<!-- 你的 HTML 代码 -->
+
+<!--导航
+        水平导航layui-nav
+            layui-nav-item表示的是导航的子项
+            layui-this表示当前被选中的项
+            layui-nav-child 表示的是二级菜单
+        垂直导航 layui-nav layui-nav-tree
+        侧边导航layui-nav layui-nav-tree layui-nav-side
+            导航的主题颜色
+                layui-bg-颜色
+                墨绿molv
+                藏青cyan
+                艳蓝blue
+        面包屑式导航
+            layui-breadcrumb
+            通过lay-separator="符号”T1
+-->
+<!--水平导航 laui-nav -->
+<!--<ul class="layui-nav">
+    <li class="layui-nav-item"><a href="">最新活动</a></li>
+    <li class="layui-nav-item"><a href="">产品</a></li>
+    <li class="layui-nav-item"><a href="">大数据</a></li>
+    <li class="layui-nav-item"><a href="">人工智能</a></li>
+    <li class="layui-nav-item"><a href="">大前端</a></li>
+    <li class="layui-nav-item"><a href="">大后端</a></li>
+    <li class="layui-nav-item">
+        <a href="">解决方案</a>
+        <dl class="layui-nav-child">
+            <dd><a href="">移动模块</a></dd>
+            <dd><a href="">后台模块</a></dd>
+            <dd><a href="">电商平台</a></dd>
+        </dl>
+    </li>
+</ul>-->
+<!--垂直导航 -->
+<!--<ul class="layui-nav layui-nav-tree">
+    <li class="layui-nav-item"><a href="">最新活动</a></li>
+    <li class="layui-nav-item"><a href="">产品</a></li>
+    <li class="layui-nav-item"><a href="">大数据</a></li>
+    <li class="layui-nav-item"><a href="">人工智能</a></li>
+    <li class="layui-nav-item"><a href="">大前端</a></li>
+    <li class="layui-nav-item"><a href="">大后端</a></li>
+    <li class="layui-nav-item">
+        <a href="">解决方案</a>
+        <dl class="layui-nav-child">
+            <dd><a href="">移动模块</a></dd>
+            <dd><a href="">后台模块</a></dd>
+            <dd><a href="">电商平台</a></dd>
+        </dl>
+    </li>
+</ul>-->
+<!--侧边导航 layui-nav layui-nav-tree layui-nav-side-->
+<!--
+<ul class="layui-nav layui-nav-tree layui-nav-side">
+    <li class="layui-nav-item"><a href="">最新活动</a></li>
+    <li class="layui-nav-item"><a href="">产品</a></li>
+    <li class="layui-nav-item"><a href="">大数据</a></li>
+    <li class="layui-nav-item"><a href="">人工智能</a></li>
+    <li class="layui-nav-item"><a href="">大前端</a></li>
+    <li class="layui-nav-item"><a href="">大后端</a></li>
+    <li class="layui-nav-item">
+        <a href="">解决方案</a>
+        <dl class="layui-nav-child">
+            <dd><a href="">移动模块</a></dd>
+            <dd><a href="">后台模块</a></dd>
+            <dd><a href="">电商平台</a></dd>
+        </dl>
+    </li>
+-->
+</ul>
+<!--面包屑导航-->
+<span class="layui-breadcrumb">
+    <a href="">首页</a>
+    <a href=""> 国际新闻</a>
+    <a href=""> 亚太地区</a>
+    <a href=""><cite>正文</cite> </a>
+</span>
+<br>
+<!---->
+<span class="layui-breadcrumb" lay-separator="-">
+    <a href="">首页</a>
+    <a href=""> 国际新闻</a>
+    <a href=""> 亚太地区</a>
+    <a href=""><cite>正文</cite> </a>
+</span>
+<script>
+    //导航依赖element 模块
+    layui.use("elment", function () {
+        var element = layui.element;
+    });
+</script>
+</body>
+</html>

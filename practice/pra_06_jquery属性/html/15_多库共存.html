@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style></style>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<script>
+    $(function(){
+        function $(ele){
+            return document.querySelector(ele);
+        }
+        console.log( $("div"));
+        // 1.如果$符号冲突我们就使用jQuery
+        jQuery.each();
+        // 2.让jquery释放对$控制权让用自己决定
+        var subian=jQuery.noConflict();
+        console.log(subian("span"));
+    })
+</script>
+<div></div>
+<span></span>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0 auto;
+            padding: 0;
+        }
+        thead>tr>th{
+            background-color: #2aabd2;
+            width: 200px;
+            height: 40px;
+        }
+        tbody tr {
+            background-color:#f0f0f0;
+        }
+        tbody tr:hover {
+            background-color:#f0f0f0;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    <input type="checkbox"tid="j_cbAll"/>
+                </th>
+                <th>商品</th>
+                <th>价钱</th>
+            </tr>
+        </thead>
+        <tbody id="j_tb">
+            <tr>
+                <td>
+                    <input type="checkbox"/>
+                </td>
+                <td>iPhone8</td>
+                <td>808e</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox"/>
+                </td>
+                <td>iPhone8</td>
+                <td>808e</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox"/>
+                </td>
+                <td>iPhone8</td>
+                <td>808e</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<script>
+    var j_cbAll = document.getElementById('j_cbAll');//全选按钒
+    var j_tbs = document.getElementById('j_tb').getElementsByTagName('input');//下面所有的复选
+    j_cbAll.onclick=function(){
+        for(var i=0;i<j_tbs.length;i++){
+            j_tbs[i].checked=this.checked;
+        }
+    }
+
+</script>
+</body>
+</html>
